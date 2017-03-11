@@ -48,7 +48,7 @@ CUpdateDownloader::~CUpdateDownloader(void)
 void CUpdateDownloader::BruteforceGetWindowsVersionNumber(OSVERSIONINFOEX& osVersionInfo)
 {
 	osVersionInfo.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
-	osVersionInfo.dwMajorVersion = HIBYTE(_WIN32_WINNT_VISTA);
+	osVersionInfo.dwMajorVersion = HIBYTE(_WIN32_WINNT_VISTA); //TODO
 	osVersionInfo.dwMinorVersion = LOBYTE(_WIN32_WINNT_VISTA);
 	osVersionInfo.dwPlatformId = VER_PLATFORM_WIN32_NT;
 

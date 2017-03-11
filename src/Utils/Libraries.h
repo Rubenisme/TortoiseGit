@@ -22,7 +22,7 @@
 // which isn't available in the Win7 SDK but not unless NTDDI_VERSION is
 // set to NTDDI_WIN7
 #pragma once
-
+//TODO
 void	EnsureGitLibrary(bool bCreate = true);
 HRESULT	GetShellLibraryItem(LPWSTR pwszLibraryName, IShellItem2** ppShellItem);
 HRESULT	OpenShellLibrary(LPWSTR pwszLibraryName, IShellLibrary** ppShellLib);

@@ -37,9 +37,9 @@ CSimpleFileFind::CSimpleFileFind(const CString &sPath, LPCTSTR pPattern) :
         }
     }
     if ((len >= 248) && (m_sPathPrefix.Left(4).Compare(L"\\\\?\\")))
-        m_hFindFile = ::FindFirstFileEx((LPCTSTR)(L"\\\\?\\" + m_sPathPrefix + pPattern), SysInfo::Instance().IsWin7OrLater() ? FindExInfoBasic : FindExInfoStandard, &m_FindFileData, FindExSearchNameMatch, nullptr, SysInfo::Instance().IsWin7OrLater() ? FIND_FIRST_EX_LARGE_FETCH : 0);
+        m_hFindFile = ::FindFirstFileEx((LPCTSTR)(L"\\\\?\\" + m_sPathPrefix + pPattern), FindExInfoBasic, &m_FindFileData, FindExSearchNameMatch, nullptr, FIND_FIRST_EX_LARGE_FETCH);
     else
-        m_hFindFile = ::FindFirstFileEx((LPCTSTR)(m_sPathPrefix + pPattern), SysInfo::Instance().IsWin7OrLater() ? FindExInfoBasic : FindExInfoStandard, &m_FindFileData, FindExSearchNameMatch, nullptr, SysInfo::Instance().IsWin7OrLater() ? FIND_FIRST_EX_LARGE_FETCH : 0);
+        m_hFindFile = ::FindFirstFileEx((LPCTSTR)(m_sPathPrefix + pPattern), FindExInfoBasic, &m_FindFileData, FindExSearchNameMatch, nullptr, FIND_FIRST_EX_LARGE_FETCH);
     if (m_hFindFile == INVALID_HANDLE_VALUE) {
         m_dError = ::GetLastError();
     }

@@ -38,7 +38,6 @@ private:
 public:
     static const SysInfo& Instance();
 
-	bool            IsWin7OrLater() const { return IsWindows7OrGreater(); }
 	bool            IsWin8OrLater() const { return IsWindows8OrGreater(); }
 	bool            IsWin10() const { return IsWindowsVersionOrGreater(HIBYTE(_WIN32_WINNT_WIN10), LOBYTE(_WIN32_WINNT_WIN10), 0); }
 };

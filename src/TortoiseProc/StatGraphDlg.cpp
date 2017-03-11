@@ -414,7 +414,7 @@ int CStatGraphDlg::GetCalendarWeek(const CTime& time)
 	// to correct our GetDays() calculation to get the correct week again
 	// This of course won't work for 'history' dates, because Windows doesn't have
 	// that information (only Vista has such a function: GetTimeZoneInformationForYear() )
-	int iWeekOfYear = 0;
+	int iWeekOfYear = 0;//TODO
 
 	int iYear = time.GetYear();
 	int iFirstDayOfWeek = 0;
